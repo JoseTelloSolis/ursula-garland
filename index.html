@@ -27,24 +27,24 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-pills">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Soy Ursula</a>
+                                    <a class="nav-link" href="#about">Soy Ursula</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Academia</a>
+                                    <a class="nav-link" href="#academy">Academia</a>
                                 </li> 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Herramientas</a>
+                                    <a class="nav-link" href="#tools">Herramientas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Talleres</a>
+                                    <a class="nav-link" href="#workshops">Talleres</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Libros</a>
+                                    <a class="nav-link" href="#books">Libros</a>
                                 </li>                                
                             </ul>    
                             <ul class="navbar-nav sm-icons">
-                                <li class="nav-item"><a class="nav-link social-link" href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                <li class="nav-item"><a class="nav-link social-link last" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="nav-item"><a class="nav-link social-link" href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li class="nav-item"><a class="nav-link social-link last" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                             </ul>                         
                         </div>
                     </nav>
@@ -260,28 +260,28 @@
                     <div class="items-separate">
                         <ul>
                             <li>
-                                <a href="#">Instagram</a>
+                                <a href="https://www.facebook.com" target="_blank">Instagram</a>
                             </li>
                             <li>
-                                <a href="#">Facebook</a>
+                                <a href="https://www.instagram.com" target="_blank">Facebook</a>
                             </li>
                         </ul>
 
                         <ul>
                             <li>
-                                <a href="#">Soy Ursula</a>
+                                <a href="#about" class="footer-link">Soy Ursula</a>
                             </li>
                             <li>
-                                <a href="#">Academia</a>
+                                <a href="#academy" class="footer-link">Academia</a>
                             </li>
                             <li>
-                                <a href="#">Herramientas</a>
+                                <a href="#tools" class="footer-link">Herramientas</a>
                             </li>
                             <li>
-                                <a href="#">Talleres</a>
+                                <a href="#workshops" class="footer-link">Talleres</a>
                             </li>
                             <li>
-                                <a href="#">Libros</a>
+                                <a href="#books" class="footer-link">Libros</a>
                             </li>                            
                         </ul>
                     </div>   
@@ -307,6 +307,21 @@
                     document.querySelector('.div-menu').classList.remove('show');
                 }
             });
+
+            let anchorlinks = document.querySelectorAll('.nav-link, .footer-link');
+ 
+            for (let item of anchorlinks) {
+                item.addEventListener('click', (e)=> {
+                    let hashval = item.getAttribute('href');
+                    let target = document.querySelector(hashval);
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    //history.pushState(null, null, hashval);
+                    e.preventDefault();
+                });
+            }
         </script>
     </body>
 </html>
