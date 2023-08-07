@@ -684,6 +684,7 @@ body {
 
     .landing {
         margin-top: 56px;
+        max-height: 400px;
     }
 
     .academy h2 {
