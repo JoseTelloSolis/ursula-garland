@@ -625,6 +625,21 @@ body {
     font-size: 13px;
 }
 
+.nav-item {
+    transition-duration: 0.3s;
+}
+
+.navbar .navbar-nav.nav-pills .nav-link {
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+}
+
+.navbar-toggler {
+    color: #fff;
+    border-color: #fff;
+}
+
 @media only screen and (max-width: 990px) {
     .div-menu {
         position: fixed;
@@ -661,6 +676,38 @@ body {
 
     .about .title {
         max-width: 100%;
+    }
+
+    .sm-icons {
+        align-items: flex-start;
+    }
+
+    .landing {
+        margin-top: 56px;
+    }
+
+    .academy h2 {
+        font-size: 42px;
+        line-height: 50px;
+        letter-spacing: -3px;
+    }
+
+    .tools h2 {
+        font-size: 40px;
+        line-height: 50px;
+        letter-spacing: -2px;
+    }
+
+    .workshops h2 {
+        letter-spacing: -3px;
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .books h2 {
+        letter-spacing: -3px;
+        font-size: 38px;
+        line-height: 50px;
     }
 }
 
